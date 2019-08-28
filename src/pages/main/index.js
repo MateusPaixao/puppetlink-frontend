@@ -11,8 +11,12 @@ function Main() {
     e.preventDefault()
   	const { data: og } = await api.post('main', { url })
 
-    setPreview(og.data)
-    console.log(og.data)
+    if(!og.error){
+      setPreview(false)
+      console.log(og.message)
+    }else{
+      setPreview(og.data)
+    }
   }
 
   function extractHostname(url){
@@ -44,7 +48,7 @@ function Main() {
             <img src={preview.ogImage.url} alt={preview.ogTitle}/>
             <div className="info">
               <strong>{preview.ogTitle}</strong>
-              <p>{preview.ogDescription} <span>{extractHostname(preview.ogUrl)}</span></p>
+              <p>{preview.ogDescription} <span>{extractHostname(url)}</span></p>
             </div>
           </a>
         </div>}
