@@ -1,16 +1,3 @@
-:root {
-	--azul-escuro: #224FB9;
-	--azul-claro: #5D9FEF;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	outline: 0;
-	box-sizing: border-box;
-	font-family: Helvetica, Arial, sans-serif;
-}
-
 .main {
 	width: 100vw;
 	height: 100vh;
