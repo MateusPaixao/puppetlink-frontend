@@ -1,11 +1,13 @@
 .main {
 	width: 100vw;
 	height: 100vh;
+	padding: 0 20px;
 	background: linear-gradient(to top, var(--azul-escuro), var(--azul-claro));
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 
 .formulario {
@@ -37,8 +39,59 @@
 	font-size: 18px;
 	font-weight: bold;
 	text-transform: uppercase;
+	cursor: pointer;
 }
 
 .preview {
+	margin-top: 30px;
+	width: 100%;
+	max-width: 600px;
+	min-height: 300px;
+	border: 1px dashed #FFF;
+}
 
+.preview a {
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+}
+
+.preview .info {
+	background: #FFF;
+	padding: 10px;
+}
+
+.preview .info strong {
+	display: block;
+	color: var(--azul-escuro);
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.preview .info p {
+	margin-bottom: 5px;
+	font-size: 14px;	
+	color: var(--azul-claro);
+}
+
+.preview .info p span {
+	display: block;
+	margin-top: 5px;
+	font-size: 14px;	
+	color: var(--azul-escuro);
+	text-align: right;	
+}
+
+@media screen and (max-width: 540px) {
+	.formulario {
+		flex-direction: column;
+	}
+
+	.formulario input {
+		width: 100%;
+	}
+
+	.formulario button {
+		width: 100%;
+	}
 }
